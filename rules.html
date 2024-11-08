@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Règles du Hangman</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="rules.html" class="active">Règles</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="language.html">Langue</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Règles du Jeu du Hangman</h1>
+        <section>
+            <h2>Objectif du Jeu</h2>
+            <p>
+                Le but est de deviner un mot caché en proposant des lettres une par une, avant que le personnage "pendu" ne soit entièrement dessiné.
+                Si le dessin est complété avant que le mot ne soit trouvé, le joueur perd.
+            </p>
+        </section>
+        <section>
+            <h2>Déroulement d'une Partie</h2>
+            <h3>Sélection du Mot</h3>
+            <p>
+                Le jeu choisit un mot au hasard parmi une liste de mots. Le mot est représenté par une série de tirets `_`, chaque tiret correspondant à une lettre du mot.
+            </p>
+            <h3>Tour de Jeu</h3>
+            <p>
+                À chaque tour, le joueur propose une lettre :
+            </p>
+            <ul>
+                <li><strong>Si la lettre est correcte</strong> : Elle est révélée à toutes les positions où elle apparaît dans le mot.</li>
+                <li><strong>Si la lettre est incorrecte</strong> : Une partie du dessin du pendu est ajoutée.</li>
+            </ul>
+            <h3>Victoire et Défaite</h3>
+            <p>
+                <strong>Victoire</strong> : Le joueur devine toutes les lettres du mot avant que le dessin du pendu ne soit complet.<br>
+                <strong>Défaite</strong> : Le dessin du pendu est entièrement complété avant que le mot ne soit deviné.
+            </p>
+        </section>
+        <section>
+            <h2>Limites des Tentatives</h2>
+            <p>
+                Le joueur a un nombre limité de tentatives pour deviner le mot. Typiquement, 6 à 7 erreurs sont permises avant la défaite.
+            </p>
+        </section>
+        <section>
+            <h2>Stratégies et Astuces</h2>
+            <ul>
+                <li><strong>Commencer par les voyelles</strong> : Elles apparaissent fréquemment dans les mots.</li>
+                <li><strong>Utiliser les lettres courantes</strong> : Les lettres comme <em>r, s, t, l, n</em> sont souvent présentes.</li>
+                <li><strong>Analyser les lettres déjà proposées</strong> : Éviter de répéter les lettres pour ne pas gaspiller de tentatives.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Variantes du Jeu</h2>
+            <p>
+                Le jeu peut inclure des thèmes spécifiques (animaux, pays, films) ou être joué en mode multijoueur où un joueur choisit le mot à deviner.
+            </p>
+        </section>
+        <section>
+            <h2>Pédagogie et Apprentissage</h2>
+            <p>
+                Le Hangman est un excellent outil pour améliorer le vocabulaire, renforcer l'orthographe et développer des compétences stratégiques.
+            </p>
+        </section>
+    </div>
+</body>
+</html>

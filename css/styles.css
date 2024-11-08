@@ -1,0 +1,152 @@
+/* styles.css */
+
+/* Styles pour le corps */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #2c3e50, #34495e);
+    color: #ecf0f1;
+}
+
+/* Barre de navigation */
+.navbar {
+    width: 100%;
+    background-color: #1c1c1c;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #e74c3c;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Indicateur de l'onglet actif */
+.navbar a.active {
+    background-color: #e74c3c;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+/* Conteneur central */
+.container {
+    text-align: center;
+    background: #1c2833;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 600px;
+    margin-top: 100px; /* Pour éviter le chevauchement avec la navbar */
+}
+
+header h1 {
+    font-size: 3em;
+    color: #e74c3c;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+main p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    color: #ecf0f1;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #ecf0f1;
+    background-color: #e74c3c;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(231, 76, 60, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.7);
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #bdc3c7;
+}
+
+/* Styles spécifiques pour la page des règles */
+
+/* Sections pour les règles */
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #e74c3c;
+    margin-top: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+p, ul {
+    color: #ecf0f1;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Responsivité */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Jeu du Hangman</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Inscription</h1>
+        </header>
+        <main>
+            <form action="game.html" method="get">
+                <label for="username">Pseudo :</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="difficulty">Niveau de difficulté :</label>
+                <select id="difficulty" name="difficulty" required>
+                    <option value="facile">Facile</option>
+                    <option value="moyen">Moyen</option>
+                    <option value="difficile">Difficile</option>
+                </select>
+
+                <button type="submit" class="btn">Commencer le Jeu</button>
+            </form>
+        </main>
+        <footer>
+            <p>© 2024 Jeu du Hangman. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>

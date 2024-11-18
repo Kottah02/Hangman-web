@@ -1,20 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Hangman Game</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu du Hangman</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-    <h1>Bienvenue sur le Hangman ! 🪢 </h1>
-    <form action="/start" method="post">
-        <label>Difficulty:</label>
-        <select name="difficulty">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
-        <button type="submit">Start Game</button>
-    </form>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="/" class="accueil">Accueil</a></li>
+            <li><a href="/rules" class="rules">Règles</a></li>
+            <li><a href="/about" class="about">À propos</a></li>
+            <li><a href="/language" class="language">Langue</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="container">
+        <header>
+            <h1>Jeu du Hangman</h1>
+        </header>
+
+        <main>
+            <p>Osez défier le destin en sauvant l'homme pendu !</p>
+            <a href="/signup" class="btn">Commencer le Jeu</a>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2024 Jeu du Hangman. Tous droits réservés.</p>
+        </footer>
+    </div>
 </body>
 </html>

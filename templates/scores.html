@@ -1,28 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tableau des Scores</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-    <h1>Tableau des Scores</h1>
-    <table>
-        <tr>
-            <th>Joueur</th>
-            <th>Mot</th>
-            <th>Essais</th>
-            <th>Résultat</th>
-        </tr>
-        {{range .}}
-        <tr>
-            <td>{{.PlayerName}}</td>
-            <td>{{.Word}}</td>
-            <td>{{.Attempts}}</td>
-            <td>{{.Result}}</td>
-        </tr>
-        {{end}}
-    </table>
-    <a href="/">Retour à l'accueil</a>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="accueil">Accueil</a></li>
+            <li><a href="rules.html" class="rules">Règles</a></li>
+            <li><a href="about.html" class="about">À propos</a></li>
+            <li><a href="language.html" class="language">Langue</a></li>
+        </ul>
+    </nav>
+
+    <!-- Tableau des scores -->
+    <div class="score-table-container">
+        <h2>Tableau des Scores</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pseudo</th>
+                    <th>Mot</th>
+                    <th>Tentatives</th>
+                    <th>Résultat</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .}}
+                    <tr>
+                        <td>{{.PlayerName}}</td>
+                        <td>{{.Word}}</td>
+                        <td>{{.Attempts}}</td>
+                        <td>{{.Result}}</td>
+                    </tr>
+                {{else}}
+                    <tr>
+                        <td colspan="4">Aucun score enregistré.</td>
+                    </tr>
+                {{end}}
+            </tbody>
+        </table>
+
+        <!-- Bouton Retour à l'Accueil -->
+        <div class="return-home">
+            <a href="/" class="btn">Retour à l'Accueil</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Jeu du Hangman. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>

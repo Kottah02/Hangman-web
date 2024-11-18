@@ -1,21 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Hangman Game</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu du Hangman</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-    <h1>Hangman Game</h1>
-    <div id="game">
-        <p>Mot: {{.Word}}</p>
-        <p>Lettre trouvé : {{.Guessed}}</p>
-        <p>Vie restantes : {{.Lives}}</p>
-        <form id="guessForm" action="/guess" method="post">
-            <input type="text" name="guess" maxlength="1" required>
-            <button type="submit">Guess</button>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="/" class="accueil">Accueil</a></li>
+            <li><a href="/rules" class="rules">Règles</a></li>
+            <li><a href="/about" class="about">À propos</a></li>
+            <li><a href="/language" class="language">Langue</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenu principal du jeu -->
+    <div class="game-container">
+        <h2>Bienvenue, {{.Player}} !</h2>
+
+        <div class="hidden-word">
+            {{.Word}}
+        </div>
+
+        <div class="lives">
+            <p>Vies restantes : {{.Lives}}</p>
+        </div>
+
+        <div class="guesses">
+            <p>Lettre(s) devinée(s) : {{.Guessed}}</p>
+        </div>
+
+        <!-- Formulaire pour deviner une lettre -->
+        <form action="/guess" method="post">
+            <label for="guess">Devinez une lettre : </label>
+            <input type="text" id="guess" name="guess" maxlength="1" required autofocus>
+            <button type="submit">Deviner</button>
         </form>
+
+        <!-- Message d'erreur si la saisie est invalide -->
+        <div class="error-message">
+            {{if .ErrorMessage}}
+                <p>{{.ErrorMessage}}</p>
+            {{end}}
+        </div>
     </div>
-    <script src="/static/script.js"></script>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Jeu du Hangman. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>

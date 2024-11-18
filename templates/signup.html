@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription - Jeu du Hangman</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
     <div class="container">
@@ -12,15 +12,15 @@
             <h1>Inscription</h1>
         </header>
         <main>
-            <form action="game.html" method="get">
+            <form action="/start" method="post">
                 <label for="username">Pseudo :</label>
                 <input type="text" id="username" name="username" required>
 
                 <label for="difficulty">Niveau de difficulté :</label>
                 <select id="difficulty" name="difficulty" required>
-                    <option value="facile">Facile</option>
-                    <option value="moyen">Moyen</option>
-                    <option value="difficile">Difficile</option>
+                    <option value="easy">Facile</option>
+                    <option value="medium">Moyen</option>
+                    <option value="hard">Difficile</option>
                 </select>
 
                 <button type="submit" class="btn">Commencer le Jeu</button>

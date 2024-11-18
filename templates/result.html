@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Resultat de la partie </title>
-    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultat - Jeu du Hangman</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-    <h1>{{.Result}}</h1>
-    <p>{{.Message}}</p>
-    <a href="/">Retour à l'accueil</a>
+    <div class="container">
+        <header>
+            <h1>Résultat de la Partie</h1>
+        </header>
+        <main>
+            <p><strong>Joueur :</strong> {{.Player}}</p>
+            <p><strong>Résultat :</strong> {{.Result}}</p>
+            <p><strong>Message :</strong> {{.Message}}</p>
+            <a href="/scores">Voir le tableau des scores</a>
+        </main>
+        <footer>
+            <p>© 2024 Jeu du Hangman. Tous droits réservés.</p>
+        </footer>
+    </div>
 </body>
 </html>

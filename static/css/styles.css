@@ -1,0 +1,225 @@
+/* Style général */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* En-tête */
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #2c3e50;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+/* Section principale */
+main {
+    text-align: center;
+    margin-top: 50px;
+}
+
+main p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Style pour la navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #34495e;
+    padding: 10px 0;
+    margin-bottom: 50px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    color: #f39c12;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin-bottom: 10px;
+    }
+}
+/* Style général de la page de jeu */
+.game-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.game-container h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.game-container .hidden-word {
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.game-container .guesses {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.game-container .lives {
+    font-size: 1.5rem;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.game-container form {
+    margin-top: 30px;
+}
+
+.game-container input[type="text"] {
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 100px;
+    text-align: center;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.game-container button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.game-container button:hover {
+    background-color: #27ae60;
+}
+
+.game-container .error-message {
+    color: #e74c3c;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+/* Responsive Design pour la page de jeu */
+@media screen and (max-width: 768px) {
+    .game-container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .game-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .game-container .hidden-word {
+        font-size: 2rem;
+    }
+
+    .game-container input[type="text"] {
+        width: 80px;
+    }
+
+    .game-container button {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+
+/* Bouton retour à l'accueil */
+.return-home {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.return-home .btn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.return-home .btn:hover {
+    background-color: #2980b9;
+}
